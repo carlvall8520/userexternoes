@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 public interface IUserInternoController {
 
-	// CAPACIDAD QUE SIRVE PARA CREAR EL USUARIO EXTERNO MEDIANTE UN POST
+	// CAPACIDAD QUE SIRVE PARA CREAR EL USUARIO EXTERNO MEDIANTE UN POST dd
 	@Operation(method = "crearUsuarioInterno", operationId = "crearUsuarioInterno", description = "Capacidad que se encarga de crear el usuario interno", tags = "UsuarioInternoEntityServiceV1", summary = "crearUsuarioInterno")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "201", description = "OK", content = @Content(schema = @Schema(implementation = RespuestaDto.class))),
