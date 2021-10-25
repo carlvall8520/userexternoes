@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  build-developer:
+  build-master:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
