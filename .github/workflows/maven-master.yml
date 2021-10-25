@@ -19,12 +19,16 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
+    - name: Stage - get maven version
+      run: mvn --version
     - name: Stage - execute test project
       run: mvn test
     - name: Stage - execute clean project
       run: mvn clean 
     - name: Stage - build project
       run: mvn -B package --file pom.xml
+    - name: Stage - generate jar file
+      run: mvn package
     - name: deploy - build and push to docker hub
       uses: docker/build-push-action@master 
       with: 
